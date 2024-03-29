@@ -1,0 +1,140 @@
+body{
+    /* 初始化 取消内外边距 */
+    margin: 0;
+    padding: 0;
+    /* 100%窗口高度 */
+    height: 100vh;
+    /* 弹性布局 水平垂直居中 */
+    /* 渐变背景 */
+    background: linear-gradient(100deg,#a1c4fd,#c2e9fb,#d4fc79,#39C5BB,#84fab0,#8fd3f4,#96e6a1,#e0c3fc,
+      #8ec5fc,#fddb92,#d1fdff,#39C5BB,#9890e3,#b1f4cf,#96deda,#50c9c3,#00cdac,#8ddad5,#39C5BB);
+    /* 指定背景图像的大小 */
+    background-size: 1200%;
+    /* 执行动画：动画名 时长 线性的 无限次播放 */
+    animation: bgAnimation 150s linear infinite;
+    outline:none;
+    box-sizing:border-box;
+}
+.text{
+    color: #fff;
+    font-size: 30px;
+    /* 字间距 */
+    letter-spacing: 15px;
+    position:absolute;
+    top:1vh;left:3vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+  position:relative;
+  top:15vh;left:35vw;
+  width:300px;
+  height:450px;
+  margin:20px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow:hidden;
+  display:flex;
+  flex-direction: column;
+  align-items:
+  color:#fff;
+  box-shadow: 0 0 30px rgba(0,0,0,.1);
+  flex-shrink: 0;
+}
+
+.card .photo img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.card .photo{
+  position:absolute;
+  top:0;
+  width:100%;
+  height:100%;
+  border-radius: 0%;
+  overflow:hidden;
+  transition:.5s;
+}
+
+.card:hover .photo{
+  top:30px;left:90px;
+  width:120px;
+  height:120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,0,0,.1)
+}
+
+.card .photo:before{
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(to bottom,transparent 50%,#39C5BB)
+}
+
+.card h2{
+  position:absolute;
+  top:350px;
+  text-align: center;
+  transition:.5s;
+  color:#39C5BB;
+  width:80%;
+  margin:auto;
+  padding:8%;
+}
+
+.card:hover h2{
+  top:140px;
+
+}
+
+.card h3{
+  width:70%;
+  margin:auto;
+  padding:5%;
+  margin-top: 70%;
+  text-indent:32px;
+  font-size: 10px;
+  margin-bottom: 15px;
+  line-height:30px;
+  color:#39C5BB;
+}
+
+.card a{
+  position:absolute;
+  top:300px;
+  margin:90px;
+  font-size: 14px;
+  font-weight: bold;
+  color:#39C5BB;
+  text-decoration: none;
+  border:1px solid #39C5BB;
+  border-radius: 10px;
+  padding:10px 30px;
+
+}
+
+.music{
+  position:relative;
+  top:100px;
+  left:35vw;
+}
+
+
+
+/* 定义动画 */
+@keyframes bgAnimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}

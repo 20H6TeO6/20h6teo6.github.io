@@ -1,0 +1,81 @@
+body{
+    /* 初始化 取消内外边距 */
+    margin: 0;
+    padding: 0;
+    /* 100%窗口高度 */
+    height: 100vh;
+    /* 弹性布局 水平垂直居中 */
+    /* 渐变背景 */
+    background: linear-gradient(100deg,#a1c4fd,#c2e9fb,#d4fc79,#39C5BB,#84fab0,#8fd3f4,#96e6a1,#e0c3fc,
+      #8ec5fc,#fddb92,#d1fdff,#39C5BB,#9890e3,#b1f4cf,#96deda,#50c9c3,#00cdac,#8ddad5,#39C5BB);
+    /* 指定背景图像的大小 */
+    background-size: 1200%;
+    /* 执行动画：动画名 时长 线性的 无限次播放 */
+    animation: bgAnimation 150s linear infinite;
+}
+.text{
+    color: #fff;
+    font-size: 50px;
+    /* 字间距 */
+    letter-spacing: 15px;
+    position:relative;
+    top:30vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+  width:300px;
+  display:flex;
+  flex-wrap: wrap
+}
+
+.container a{
+  position:relative;
+  top:30vh;left:40vw;
+  padding:15px 20px;
+  text-decoration:none;
+  margin:20px;
+  letter-spacing: 2px;
+  color:#39C5BB;
+  transition:.5s;
+  background:#fff;
+  font-weight:bold;
+}
+
+.container a:hover{
+  transform: translateY(-15px);
+}
+
+.container a::before{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:5%;
+  width:90%;
+  height:4px;
+  background:rgba(0,0,0,.1);
+  border-radius:50%;
+  transform:scale(0);
+  transition:.5s;
+
+}
+
+.container a:hover::before{
+  transform:scale(1);
+  bottom:-15px;
+}
+
+/* 定义动画 */
+@keyframes bgAnimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}

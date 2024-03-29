@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ボカロ×元素宇宙 卡片</title>
+    <link rel="stylesheet" href="card.css">
+
+  </head>
+  <body>
+        <h2 class='text'>ボカロ×元素宇宙</h2>
+        <div class="card">
+          <div class="photo">
+            <img id='pic' alt="图片已丢失"/>
+          </div>
+          <h2 id='head2'></h2>
+          <h3 id='paragraph'></h3>
+          <a href="prepare.html" title='获取坐标'>再次跃迁</a>
+          <!-- <embed width="0" height="0" id='musicplay'></embed> -->
+        </div>
+        <audio autoplay='autoplay' id=musicplay loop='loop' controls='controls' class='music'>
+        </audio>
+        <script>
+        // 读取数据
+        a1=localStorage.getItem('card_name')
+        a2=localStorage.getItem('intro')
+          document.getElementById('pic').src=localStorage.getItem('bgpic');
+          document.getElementById('musicplay').src=localStorage.getItem('music');
+          // document.getElementById('head2').src=localStorage.getItem('card_name');
+          // document.getElementById('paragraph').src=localStorage.getItem('intro');
+            document.getElementById("head2").innerHTML = a1;
+            document.getElementById("paragraph").innerHTML = a2;
+
+
+        </script>
+
+  </body>
+</html>

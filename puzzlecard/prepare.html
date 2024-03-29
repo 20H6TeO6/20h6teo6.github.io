@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ボカロ×元素宇宙 跃迁准备就绪</title>
+    <link rel="stylesheet" href="prepare.css">
+  </head>
+  <body>
+    <div class='back'><a href="name.html" title='返回上一页'><</a></div>
+    <h2 class='text'>ボカロ×元素宇宙</h2>
+    <p class="para" id='get_ready'>一切准备就绪，您随时可以出发。</p>
+    <div class='container'><a title='立即出发' onclick='luck()' href='card.html'>跃迁</a></div>
+    <script>
+      // x=localStorage.getItem('player_name');
+      // document.getElementById('get_ready').innerHTML=x+'，一切准备就绪，您随时可以出发。';
+      function luck(){
+        var arr=[
+          "初铟未铼",
+          "不为人知的锇妈妈",
+          "锂表情人",
+          "砷氦少女",
+          "罗密欧与锌锝瑞拉",
+          "染上你的颜铯",
+          "铈界碲一公主殿下",
+          "钛阳系disco",
+          "马赛氪卷",
+          "晚餐磷",
+          "钇钕解剖",
+          "钚知醉",
+          "砹言叶",
+          "吉原锿鎶",
+          "二锡步行",
+          "萨钼沙",
+          "幸氟安心委员会",
+          "予铌回归",
+          "铀灵东京"
+        ];
+        var num=Math.floor(Math.random()*arr.length);
+
+        var arr1=[
+          "39（Thank you）!\nあれ、なんだかアタシの名前みたい（笑）\n今日もありがとう",
+          "もーラブラブになっちゃってー\n横隔膜突っ張っちゃってー\n強烈な味にぶっ飛んでー　\n等身大の裏・表\n脅迫的に縛っちゃってー\n網膜の上に貼っちゃってー\nもーラブラブでいっちゃってよ！\n愛愛愛愛無い！",
+          "如果要我来讲述爱的话\b你的眼中会倒映出什么?\n就算世界否定我的现在\n能否让我再次唱起爱的歌谣?\n再一次\b将无人知晓的思念\n寄托在这歌声里\b也是可以的吧?\n呐，如果呼唤爱的话\n我就在这里哟\n如果由我解释爱的话\n那将会全部在这首歌里\n无人知晓的这个故事\n好像又不经意间小声说出来了呢\n",
+          "悲しみの海に沈んだ私……\n深海少女　わざわざ沈む……\n在大活被迫成为了深海少女呢……",
+          "你们就好好地、去做个美梦吧\n已经是大人该睡觉的时间了唷\n不要再为了前端开发设计DDL熬夜到4点了哟",
+          "魔法少女什么的，已经够了\n不过说到魔法少女的话果然还是那个吧！（暗示）",
+          "第一，要发觉到我和平常不同的发型♪\n第二，要好好地把我从头看到鞋子 懂了没？\n第三，我说一句话 你必须要响应我三句话♪\n第四，如果懂了的话，我的右手现在正空着呢！\n第五，人……",
+          "在那一等星的喧嚣光芒下\n请让我与你一同来跳舞吧\n让我等来伴随着太阳系的脉动\n跳着交错的舞步来散发光芒吧\n星！",
+          "真是可恶啊\n那个蓝蓝绿绿的家伙怎么又来reload我的歌了",
+          "皆と同じように\n私を呼んで\ndinner bell\ndinner bell\ndinner bell",
+          "来玩名为乙女解剖的游戏吧！\nTeddyLoid牌电火锅，启动！",
+          "烤牛肉p\n请你不要再用英文声库调日语歌了",
+          "愛言葉ⅠⅡⅢⅣ\n又名deco p年度作品集\n又名自我引用论文大赏",
+          "吉原，今日有雨，\n湿度89%，东南风，\nTetoTV为您播报",
+          "火锅p，\n2020年，你又炒了一锅香香的冷饭，\n喂饱了70w+喜欢吃火锅的观众",
+          "ズキズキズキ\nズキズキズキ\nズキズキズキ\nザッザッザッザッザムザー",
+          "国民总幸福量\n「非常幸福」99.9%\n我等乃幸福安心委员会\n幸福なのは義務なんです\n幸福なのは義務なんです\n幸福なのは義務なんです\n幸せですか？義務ですよ。\n果たしてますか？\n幸せじゃないなら…\n絞首\b斬首\b銃殺\b釜ゆで\b溺死\b電気\n火あぶり\b生き埋め\b薬殺\b石打ち\b鋸\bはりつけ\n好きなのを、選んでね♪",
+          "今年的水稻长势也很好呢！\n（弯腰）（收割）（擦汗）",
+          "呐呐中分男，\n不要再自我引用了好吗？\n虽然mikura性能非常好用，\n也要记得常回家看看哦（抹泪）"
+        ];
+
+        var pic=[
+          "pictures/1200x1200bf-60.jpg",
+          "pictures/unknown_mother_goose.jpg",
+          "pictures/60977_prev.jpg",
+          "pictures/20200715071237_frihe.jpeg",
+          "pictures/romioandcinderella.jpg",
+          "pictures/kimiiro_ni_somaru.jpg",
+          "pictures/world_is_mine.jpg",
+          "pictures/disco.jpg",
+          "pictures/mosaicroll.jpg",
+          "pictures/dinner_bell.jpg",
+          "pictures/otomekaipou.jpeg",
+          "pictures/buzhizui.jpg",
+          "pictures/aikotoba.jpg",
+          "pictures/teto.jpg",
+          "pictures/erxibuxing.jpg",
+          "pictures/zamuza.jpg",
+          "pictures/xingfuanxin.jpg",
+          "pictures/kimini.jpg",
+          "pictures/yuurei_tokyo.jpg"
+        ];
+
+        var mus=[
+          "http://music.163.com/song/media/outer/url?id=858524.mp3",
+          "http://music.163.com/song/media/outer/url?id=502455381.mp3",
+          "http://music.163.com/song/media/outer/url?id=22677436.mp3",
+          "http://music.163.com/song/media/outer/url?id=469073360.mp3",
+          "http://music.163.com/song/media/outer/url?id=33937485.mp3",
+          "http://music.163.com/song/media/outer/url?id=39443782.mp3",
+          "http://music.163.com/song/media/outer/url?id=22677570.mp3",
+          "http://music.163.com/song/media/outer/url?id=459717345.mp3",
+          "http://music.163.com/song/media/outer/url?id=1925407406.mp3",
+          "http://music.163.com/song/media/outer/url?id=2033851562.mp3",
+          "http://music.163.com/song/media/outer/url?id=1500428581.mp3",
+          "http://music.163.com/song/media/outer/url?id=1943883908.mp3",
+          "http://music.163.com/song/media/outer/url?id=28152549.mp3",
+          "http://music.163.com/song/media/outer/url?id=2067735797.mp3",
+          "http://music.163.com/song/media/outer/url?id=1500428579.mp3",
+          "http://music.163.com/song/media/outer/url?id=2037085150.mp3",
+          "http://music.163.com/song/media/outer/url?id=514761071.mp3",
+          "http://music.163.com/song/media/outer/url?id=1921983211.mp3",
+          "http://music.163.com/song/media/outer/url?id=1876028528.mp3"
+        ]
+
+        const map1 = new Map();
+        const map2 = new Map();
+        const map3 = new Map();
+        for (i = 0; i < arr.length; i++) {
+            map1.set(arr[i],arr1[i]);
+            map2.set(arr[i],pic[i]);
+            map3.set(arr[i],mus[i])
+         }
+
+        // 写入数据
+        localStorage.setItem('intro',map1.get(arr[num]));  //将变量uid(值为1000)存储至本地
+        localStorage.setItem('bgpic',map2.get(arr[num]));
+        localStorage.setItem('music',map3.get(arr[num]));
+        localStorage.setItem('card_name',arr[num]);
+      }
+
+
+    </script>
+  </body>
+</html>

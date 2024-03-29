@@ -1,0 +1,150 @@
+body{
+    /* 初始化 取消内外边距 */
+    margin: 0;
+    padding: 0;
+    /* 100%窗口高度 */
+    height: 100vh;
+    /* 弹性布局 水平垂直居中 */
+    /* 渐变背景 */
+    background: linear-gradient(100deg,#a1c4fd,#c2e9fb,#d4fc79,#39C5BB,#84fab0,#8fd3f4,#96e6a1,#e0c3fc,
+      #8ec5fc,#fddb92,#d1fdff,#39C5BB,#9890e3,#b1f4cf,#96deda,#50c9c3,#00cdac,#8ddad5,#39C5BB);
+    /* 指定背景图像的大小 */
+    background-size: 1200%;
+    /* 执行动画：动画名 时长 线性的 无限次播放 */
+    animation: bgAnimation 150s linear infinite;
+    outline:none;
+    box-sizing:border-box;
+}
+.text{
+    color: #fff;
+    font-size: 30px;
+    /* 字间距 */
+    letter-spacing: 15px;
+    position:absolute;
+    top:1vh;left:10vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    position:relative;
+    top:35vh;left:25vw;
+    width:500px;
+    background-color:#fff;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+    border-radius: 8px;
+}
+.wrapper .input-data{
+  position:relative;
+  width:100%;
+  height:40px;
+}
+.wrapper .input-data input{
+  width:100%;
+  height:100%;
+  border:none;
+  font-size: 17px;
+  border-bottom: 1px solid #39C5BB;
+}
+.wrapper .input-data input:valid~lable,
+.wrapper .input-data input:focus~lable{
+  transform:translateY(-25px);
+  font-size: 16px;
+  color:#00cdac;
+}
+.wrapper .input-data lable{
+  position:absolute;
+  bottom:10px;
+  left:0px;
+  color:#39C5BB;
+  pointer-events: none;
+  trasition: all .3s ease;
+}
+.wrapper .input-data .underline{
+  position:absolute;
+  bottom:0px;
+  height:2px;
+  width:100%;
+  background-color: #00cdac;
+  transform:scaleX(0);
+  transition:all .3s ease;
+}
+.wrapper .input-data input:valid~.underline,
+.wrapper .input-data input:focus~.underline{
+  transform:scaleX(1);
+}
+
+
+.container{
+  width:300px;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.container a{
+  position:relative;
+  top:45vh;left:70vw;
+  padding:15px 20px;
+  text-decoration:none;
+  margin:20px;
+  letter-spacing: 2px;
+  color:#39C5BB;
+  transition:.5s;
+  background:#fff;
+  font-weight:bold;
+}
+
+.container a:hover{
+  transform: translateY(-15px);
+}
+
+.container a::before{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:5%;
+  width:90%;
+  height:4px;
+  background:rgba(0,0,0,.1);
+  border-radius:50%;
+  transform:scale(0);
+  transition:.5s;
+
+}
+
+.container a:hover::before{
+  transform:scale(1);
+  bottom:-15px;
+}
+
+.back{
+  font-size: 20px;
+  width:300px;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.back a{
+  position:relative;
+  top:1vh;left:1vw;
+  padding:10px 10px;
+  text-decoration:none;
+  margin:20px;
+  color:#39C5BB;
+  background:#fff;
+  font-weight:bold;
+}
+
+/* 定义动画 */
+@keyframes bgAnimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
