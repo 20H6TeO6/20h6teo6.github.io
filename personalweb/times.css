@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+  height:430vh;
+  background: linear-gradient(#3E86FF,#6595EA,#C4EAE9,#C4EAE9,#C4EAE9,#D6FFFE);
+  background-size: 1000%;
+}
+
+.links{
+  font-size: 25px;
+  position:absolute;
+  top:5vh;
+  left:3vw;
+  text-decoration: none;
+  width:55px;
+  margin:auto;
+  padding:10px 15px;
+  border-radius: 20%;
+  background: #fff;
+  color:#3E86FF;
+  font-weight: bold;
+}
+.head1{
+  position:relative;
+  top:2vh;
+  left:5vw;
+  font-size: 50px;
+  margin:10px 50px;
+  padding:5px 0 70px 0;
+}
+.container{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:10px 50px;
+  padding:30px;
+}
+.container .card{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width:300px;
+  height:300px;
+  background: #fff;
+  border-radius: 5%;
+  box-shadow: 0 30px 50px rgba(0,0,0,.1);
+  transition:0.5s;
+}
+.container .card:hover{
+  height:400px;
+}
+.container .card .imgbx{
+  position:absolute;
+  top:20px;
+  width: 250px;
+  height:220px;
+  background: #333;
+  border-radius: 2%;
+  overflow: hidden;
+  transition:0.5s;
+}
+.container .card:hover .imgbx{
+  top:-50px;
+  height:300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2)
+}
+.container .card .imgbx img{
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+.container .card .content{
+  position:absolute;
+  top:252px;
+  width: 100%;
+  padding:0 30px;
+  height:35px;
+  overflow: hidden;
+  text-align: center;
+  transition:0.5s;
+}
+.container .card:hover .content{
+  top:260px;
+  height:100%;
+}
+.container .card .content h2{
+  color:#6595EA;
+}
+.container .card .content p{
+  font-size: 13px;
+  color:#6595EA;
+}
+.container .card .content a{
+  position:relative;
+  top:10px;
+  display:inline-block;
+  padding:10px 15px;
+  background: #6595EA;
+  color:#fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius:10%;
+}
+
+.btmnav {
+    position: relative;
+    border: none;
+    border-radius: 10em;
+    display: flex;
+    list-style: none;
+    background: #fff;
+    box-shadow: 20px 40px 40px #00000033;
+    padding: 10px;
+}
+
+.btmnav li a {
+    position: relative;
+    padding: 15px 50px;
+    font: 500 24px;
+    border: none;
+    outline: none;
+    color:#3E86FF;
+    display: inline-block;
+    text-decoration: none;
+    z-index: 3;
+}
